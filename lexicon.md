@@ -1,5 +1,9 @@
 Datasets,
 CSV files,
 txt files,
-python
+python,
+Data Science,
+Pandas,
+graphs,
+
 
