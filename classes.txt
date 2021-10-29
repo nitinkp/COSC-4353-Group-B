@@ -1,1 +1,3 @@
-
+Graph class - Class that represents the node and edge graph. Also contains functions for adding and removing nodes and edges, naming and storing graphs.
+Algorithms class - This class will hold all the algorithm functions and take in the graph as a parameter. It could also return a new graph if a new graph is made from the functions applied to it.
+Pandas extension class - This class will be extended from pandas and have access to all the provided pandas functions.
