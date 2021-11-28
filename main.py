@@ -1,3 +1,3 @@
 # main.py
 # Travis test!
-print("Travis Test successful")
+print("Travis Test success")
