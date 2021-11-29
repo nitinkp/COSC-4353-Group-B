@@ -27,12 +27,14 @@ class Graph:
 		newRow = np.zeros(self.nodeCount, dtype=int)
 		print(newRow)
 		# Append row
-		newMatrix = np.append(newMatrix,newRow,axis=0)
+		newMatrix = np.insert(newMatrix,self.nodeCount,newRow,axis=0)
+		self.nodeCount = self.nodeCount+1
 		print(newMatrix)
 		# Create and append column
-		# newCol = np.zeros(self.nodeCount,dtype=int)
-		# newMatrix = np.append(newMatrix, newCol, axis=0)
-		# print(newMatrix)
+		newCol = np.zeros(self.nodeCount,dtype=int).T
+		print(newCol)
+		newMatrix = np.append(newMatrix, newCol, axis=1)
+		print(newMatrix)
 
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
