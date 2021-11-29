@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+class graph:
+	#Class that represents the node and edge graph. Also contains functions for adding and removing 	nodes and edges, naming and storing graphs.
+=======
+#Imports
+import numpy
+import pandas
+
+class graph:
+	# Class that represents the node and edge graph. Also contains functions for adding and removing nodes and edges, naming and storing graphs.
+	def __init__(self, node, edge, name):
+		self.name = name
+		# Add in more for graph information
+		# Adjacency matrix
+
+		# Adjacency list
+
+		# node list
+
+		# edge list
+
+		# edge count
+
+		# node count
+
+	# Insert node
+	# Inserts node into graph (need to figure out about edge connections)
+	
+=======
 import numpy
 import pandas
 
@@ -13,6 +43,7 @@ class graph:
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
 
+>>>>>>> c8380f15c51d62f567b1fe049620a58865519ba9
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
 
@@ -44,4 +75,9 @@ class graph:
 	# Gets count of number of nodes in graph
 
 	# EdgeCount
+<<<<<<< HEAD
 	# Gets count of number of nodes in graph
+>>>>>>> Stashed changes
+=======
+	# Gets count of number of nodes in graph
+>>>>>>> c8380f15c51d62f567b1fe049620a58865519ba9
