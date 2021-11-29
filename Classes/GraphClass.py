@@ -22,25 +22,17 @@ class Graph:
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
 	def insertNode(self):
-		# Create a copy of the array
-		newArray = self.adjMatrix
-		# Create a new array of 0s based on length
-		newRow = np.zeros(self.nodeCount)
-		# Add the new row to the matrix
-		print(newArray)
-		newArray = np.append(newArray, newRow)
-		print(newArray)
-		newCol = np.zeros(self.nodeCount)
-		# # Increment the number of nodes we have
-		# graph.nodes = nodes + 1
-		# # Need to add both row and column of zeros to adjacency matrix
-		# # first create row of 0's
-		# newRow = np.zeros(nodes)
-		# # Append this to the end of the current matrix
-		# print(adjMatrix.append(adjMatrix, nodes))
-		# # Reset the current array with new values
-		# # ADD IN NEW COLUMN OF 0's
-		pass
+		newMatrix = self.adjMatrix
+		# Create new row to add
+		newRow = np.zeros(self.nodeCount, dtype=int)
+		print(newRow)
+		# Append row
+		newMatrix = np.append(newMatrix,newRow,axis=0)
+		print(newMatrix)
+		# Create and append column
+		# newCol = np.zeros(self.nodeCount,dtype=int)
+		# newMatrix = np.append(newMatrix, newCol, axis=0)
+		# print(newMatrix)
 
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
@@ -146,5 +138,15 @@ class Graph:
 		edgeCount = int((d.get(1))/2)
 		return edgeCount
 	
+	# getMatrix
+	# Returns matrix for graph
+	def getMatrix(self):
+		newMatrix = self.adjMatrix
+		return newMatrix
+
 	# Output function
 	# Create a csv file
+	def save(self):
+		# Put numpy array into csv file
+		print("Saving file under 'adjmatrix.csv'")
+		np.savetxt('adjMatrix.csv', self.adjMatrix, delimiter=",")

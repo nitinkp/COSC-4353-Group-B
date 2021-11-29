@@ -37,7 +37,7 @@ print()
 
 # Test insertNode
 print("Testing insertNode")
-test.insertNode()
+# test.insertNode()
 print("Pass...")
 
 # Test insertEdge
@@ -72,3 +72,13 @@ print("Testing getEdgeCount")
 edgeCount = test.getEdgeCount()
 print(edgeCount)
 # print("Pass...")
+
+# Testing save csv file
+# Need to fix file so it saves as integers
+print("Testing csv file save")
+test.save()
+
+# Testing get matrix
+print("Testing get matrix")
+matrix = test.getMatrix()
+print(matrix)
