@@ -24,22 +24,17 @@ for f1, f2, f3 in os.walk(input_folder):
     for file in f3:
         inputs_list.append(os.path.join(f1, file))
 
-# print(inputs_list)
+print(inputs_list)
 given_num = int(input("choose one file from the available inputs as a number between 0 - 4: "))
 
 file_name = ""
 
 for i in range(given_num):
-    if i == 0:
-        file_name = inputs_list[0]
-    elif i == 1:
-        file_name = inputs_list[1]
-    elif i == 2:
-        file_name = inputs_list[2]
-    elif i == 3:
-        file_name = inputs_list[3]
-    elif i == 4:
-        file_name = inputs_list[4]
+    print(i)
+    try:
+        file_name = inputs_list[i+1]
+    except:
+        print("Provide input from given files")
 
 # print(file_name)
 # cons = []
@@ -102,6 +97,7 @@ selected_node[0] = True
 out = []
 edge_out = []
 edge_out2 = []
+weights = []
 while edges < nodes - 1:
 
     minimum = INF
@@ -119,6 +115,7 @@ while edges < nodes - 1:
     out += [[str(a) + " - " + str(b)] + [str(g[a][b])]]
     edge_out += [str(a)]
     edge_out2 += [str(b)]
+    weights += [str(g[a][b])]
     df2 = pd.DataFrame(out, columns=["Edge", "Weight"])
     # print(df2)
     # print(out)
@@ -141,6 +138,11 @@ gr = nx.Graph()
 
 for i in range(len(edge_out)):
     gr.add_edge(edge_out[i], edge_out2[i])
+
+# for e in gr.edges():
+#     gr[e[0]][e[1]] = weights[e]
+#
+# nx.set_edge_attributes(gr, values=weights, name='weight')
 
 print(nx.info(gr))
 
