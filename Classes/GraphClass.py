@@ -7,6 +7,7 @@ class Graph:
 		self.name = name
 		self.adjMatrix = adjMatrix
 		self.nodeCount = self.getNodeCount()
+		self.edgeCount = self.getEdgeCount()
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
