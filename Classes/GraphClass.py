@@ -85,10 +85,38 @@ class Graph:
 		print(self.adjMatrix)
 		self.adjMatrix = newMatrix
 
-	# Set edge
+	# Set edge weight
 	# Sets the value and direction of an edge between two nodes (or one node if self referencing)
-	def setEdge(self, a, b, value):
-		pass
+	def setEdgeWeight(self, a, b, weight):
+		# CHECK IF WEIGHTED GRAPH
+		# Sets edge value in matrix to 0
+		# Check if the edge values are out of place first
+		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
+			print("Node index out of bounds")
+			return -1
+		
+		# Need to make copy of adjMatrix and then resave it
+		# print(self.adjMatrix)
+		# print(a)
+		# print(b)
+		newMatrix = self.adjMatrix
+		newMatrix[int(a-1),int(b-1)] = weight
+		newMatrix[int(b-1),int(a-1)] = weight
+		print("Edge weight between nodes " + str(a) + " and " + str(b) + "changed to: " + str(weight))
+		print(self.adjMatrix)
+		self.adjMatrix = newMatrix
+	
+	# Get edge weight
+	# Get's edge weight between two nodes
+	def getEdgeWeight(self, a, b):
+				# CHECK IF WEIGHTED GRAPH
+		# Sets edge value in matrix to 0
+		# Check if the edge values are out of place first
+		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
+			print("Node index out of bounds")
+			return -1
+		weight = self.adjMatrix[int(a), int(b)]
+		return weight
 	# NodeCount
 	# Gets count of number of nodes in graph
 	def getNodeCount(self):
