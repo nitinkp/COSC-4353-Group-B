@@ -6,7 +6,7 @@ class Graph:
 	def __init__(self, name, adjMatrix):
 		self.name = name
 		self.adjMatrix = adjMatrix
-		
+		nodeCount = self.getNodeCount
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
@@ -33,10 +33,11 @@ class Graph:
 		pass
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
-	def insertEdge(a,b):
-		# # Sets edge value between two nodes to 1
-		# adjMatrix.itemset((a,b), 1)
-		pass
+	def insertEdge(self, a, b):
+		# Check if the edge values are out of place first
+		if(a > self.no)
+		self.adjMatrix[a,b] = 1
+		self.adjMatrix[b,a] = 1
 	# Remove node
 	# Removes node from graph (needs to remove related edges from node that was removed)
 	def removeNode(value):
@@ -62,7 +63,7 @@ class Graph:
 		pass
 	# Set edge
 	# Sets the value and direction of an edge between two nodes (or one node if self referencing)
-	def setEdge():
+	def setEdge(self, a, b, value):
 		pass
 	# Find node
 	# Trys to find if node exists in graph. This does not count as a search algorithm and could linearly search through the whole list (O(n) nodes to search)
