@@ -3,6 +3,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 import os
+import file_to_mat
 
 INF = 999
 # number of vertices in graph
@@ -25,30 +26,30 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_num = int(input("choose one file from the available inputs as a number starting with 0: "))
+given_file = int(input("choose one file from the available inputs as a number starting with 0: "))
 
-file_name = ""
-
-
-
-for i in range(given_num):
-    print(i)
-    try:
-        file_name = inputs_list[i + 1]
-    except:
-        print("Provide input from given files")
-
-# print(file_name)
-# cons = []
-# con = ""
-with open(file_name) as r:
-    try:
-        cons = r.read()
-        # print(cons)
-        # con += cons
-    except:
-        pass
-i = i + 1
+# file_name = ""
+#
+g = file_to_mat.file_to_matrix(input_folder, given_file)
+#
+# for i in range(given_num):
+#     print(i)
+#     try:
+#         file_name = inputs_list[i + 1]
+#     except:
+#         print("Provide input from given files")
+#
+# # print(file_name)
+# # cons = []
+# # con = ""
+# with open(file_name) as r:
+#     try:
+#         cons = r.read()
+#         # print(cons)
+#         # con += cons
+#     except:
+#         pass
+# i = i + 1
 
 # adj_list[] = {{1->2->5}, {2->1,3,5,6}
 # {3->2,4,6}
@@ -72,18 +73,16 @@ i = i + 1
 #     return matrix
 
 
-# cons.replace("'", "[")
-li = cons.split('\n')
-li2 = [e.split(',') for e in li]
-g = []
-for e in li2:
-    li4 = []
-    for j in e:
-        li4.append(int(j))
-    g.append(li4)
+# # cons.replace("'", "[")
+# li = cons.split('\n')
+# li2 = [e.split(',') for e in li]
+# g = []
+# for e in li2:
+#     li4 = []
+#     for j in e:
+#         li4.append(int(j))
+#     g.append(li4)
 # print(li3)
-
-df = pd.DataFrame(g)
 
 # print(g)
 #

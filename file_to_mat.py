@@ -8,12 +8,10 @@ def file_to_matrix(folder_input, num):
         for file in f3:
             inputs_list.append(os.path.join(f1, file))
 
-    print(inputs_list)
-
     file_name = ""
 
     for i in range(num):
-        print(i)
+        # print(i)
         try:
             file_name = inputs_list[i + 1]
         except:

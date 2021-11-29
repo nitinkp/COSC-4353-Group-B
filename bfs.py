@@ -1,4 +1,4 @@
-import pandas as pd
+import file_to_mat
 import os
 
 input_folder = 'Adjacency matrices'
@@ -10,37 +10,40 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_num = int(input("choose one file from the available inputs as a number starting with 0: "))
+given_file = int(input("choose one file from the available inputs as a number starting with 0: "))
 
-file_name = ""
+given_num = int(input("enter a number between 0 to 4 to search in the graph: "))
+# file_name = ""
+#
+# for i in range(given_num):
+#     print(i)
+#     try:
+#         file_name = inputs_list[i + 1]
+#     except:
+#         print("Provide input from given files")
+#
+# # print(file_name)
+# # cons = []
+# # con = ""
+# with open(file_name) as r:
+#     try:
+#         cons = r.read()
+#         # print(cons)
+#         # con += cons
+#     except:
+#         pass
+# i = i + 1
+#
+# li = cons.split('\n')
+# li2 = [e.split(',') for e in li]
+# g = []
+# for e in li2:
+#     li4 = []
+#     for j in e:
+#         li4.append(int(j))
+#     g.append(li4)
 
-for i in range(given_num):
-    print(i)
-    try:
-        file_name = inputs_list[i + 1]
-    except:
-        print("Provide input from given files")
-
-# print(file_name)
-# cons = []
-# con = ""
-with open(file_name) as r:
-    try:
-        cons = r.read()
-        # print(cons)
-        # con += cons
-    except:
-        pass
-i = i + 1
-
-li = cons.split('\n')
-li2 = [e.split(',') for e in li]
-g = []
-for e in li2:
-    li4 = []
-    for j in e:
-        li4.append(int(j))
-    g.append(li4)
+g = file_to_mat.file_to_matrix(input_folder, given_file)
 
 
 def matrix_to_list(g):
@@ -75,4 +78,5 @@ def bfs(graph, v):
 
 
 gr = matrix_to_list(g)
-print(bfs(gr, 4))
+print("The breadth first search result on the given number is: ")
+print(bfs(gr, given_num))
