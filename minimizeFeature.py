@@ -51,6 +51,28 @@ with open(file_name) as r:
         pass
 i = i + 1
 
+# adj_list[] = {{1->2->5}, {2->1,3,5,6}
+# {3->2,4,6}
+# {4->3,6}
+# {5->1,2,6}
+# {6->2,3,4,5}}
+
+# adj_list = {"{0 – > 1 – > 3}, {1 – > 2}, {2 – > 3}"}
+#
+# num_line = 6
+#
+# def convert(adj, num_lines):
+#     # Initialize a matrix
+#     matrix = [[0 for j in range(num_lines)]
+#               for i in range(num_lines)]
+#
+#     for i in range(num_lines):
+#         for j in adj[i]:
+#             matrix[i][j] = 1
+#
+#     return matrix
+
+
 # cons.replace("'", "[")
 li = cons.split('\n')
 li2 = [e.split(',') for e in li]
