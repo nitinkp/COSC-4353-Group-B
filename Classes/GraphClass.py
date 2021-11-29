@@ -81,32 +81,13 @@ class Graph:
 		newMatrix = self.adjMatrix
 		newMatrix[int(a-1),int(b-1)] = 0
 		newMatrix[int(b-1),int(a-1)] = 0
-		print("Edge added between nodes " + str(a) + " and " + str(b))
+		print("Edge removed between nodes " + str(a) + " and " + str(b))
+		print(self.adjMatrix)
 		self.adjMatrix = newMatrix
 
-	# Get node
-	# Returns a node in the graph (prob really returns its positon in the adjenccy matrix?)
-	def getNode():
-		pass
-	# Get edge
-	# Returns edge in graph (Edge by itself isn't that great, maybe a tuple with the two nodes the edge connects (on one node if its self referencing) Direction too?)
-	def getEdge():
-		pass
-	# Set node
-	# Sets the value of a given node. Node has to exist. Data could be anything, need to respect pandas
-	def setNode():
-		pass
 	# Set edge
 	# Sets the value and direction of an edge between two nodes (or one node if self referencing)
 	def setEdge(self, a, b, value):
-		pass
-	# Find node
-	# Trys to find if node exists in graph. This does not count as a search algorithm and could linearly search through the whole list (O(n) nodes to search)
-	def findNode():
-		pass
-	# Find edge
-	# Trys to find if edge exists in graph. This also does not count as a search algorithm.
-	def findEdge():
 		pass
 	# NodeCount
 	# Gets count of number of nodes in graph

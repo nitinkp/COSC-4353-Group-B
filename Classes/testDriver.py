@@ -53,31 +53,9 @@ print("Pass...")
 
 # Test removeEdge
 print("Testing removeEdge")
+test.removeEdge(1,4)
 print("Pass...")
 
-# Test getNode
-print("Testing getNode")
-print("Pass...")
-
-# Test getEdge
-print("Testing getEdge")
-print("Pass...")
-
-# Testing setNode
-print("Testing setNode")
-print("Pass...")
-
-# Testing setEdge
-print("Testing setEdge")
-print("Pass...")
-
-# Testing findNode
-print("Testing findNode")
-print("Pass...")
-
-# Testing findEdge
-print("Testing findEdge")
-print("Pass...")
 
 # Testing getNodeCount
 print("Testing getNodeCount")
