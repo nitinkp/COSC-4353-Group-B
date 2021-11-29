@@ -51,6 +51,7 @@ print(test.adjMatrix)
 print("Testing removeNode")
 test.removeNode(2)
 print("Pass...")
+print(test.adjMatrix)
 
 # Test removeEdge
 print("Testing removeEdge")

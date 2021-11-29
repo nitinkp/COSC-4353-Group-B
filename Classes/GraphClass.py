@@ -71,13 +71,14 @@ class Graph:
 		# Create new matrix
 		newMatrix = self.adjMatrix
 		# Delete row first
-		np.delete(newMatrix,value,0)
-		print(newMatrix)
+		newMatrix = np.delete(newMatrix,value,0)
+		# print(newMatrix)
 		# Next delete column
-		np.delete(newMatrix,value,1)
-		print(newMatrix)
+		newMatrix = np.delete(newMatrix,value,1)
+		# print(newMatrix)
 		print("Deleted node " + str(value))
-		
+		self.adjMatrix = newMatrix
+
 	# Remove edge
 	# Removes edge from between two nodes (needs node a, node b, and edge. Need to work on how multiple edges work)
 	def removeEdge(self, a, b):
