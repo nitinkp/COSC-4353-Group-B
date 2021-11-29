@@ -32,7 +32,7 @@ file_name = ""
 for i in range(given_num):
     print(i)
     try:
-        file_name = inputs_list[i+1]
+        file_name = inputs_list[i + 1]
     except:
         print("Provide input from given files")
 
@@ -122,8 +122,9 @@ while edges < nodes - 1:
     selected_node[b] = True
     edges += 1
 
-print(edge_out)
-print(edge_out2)
+# print(edge_out)
+# print(edge_out2)
+# print(weights)
 try:
     print("The dataframe for minimum spanning tree graph is: ")
     print(df2)
@@ -137,7 +138,7 @@ except:
 gr = nx.Graph()
 
 for i in range(len(edge_out)):
-    gr.add_edge(edge_out[i], edge_out2[i])
+    gr.add_edge(edge_out[i], edge_out2[i], weight=weights[i])
 
 # for e in gr.edges():
 #     gr[e[0]][e[1]] = weights[e]
@@ -146,6 +147,8 @@ for i in range(len(edge_out)):
 
 print(nx.info(gr))
 
-nx.draw(gr)
+pos = nx.spring_layout(gr, seed=7)
+
+nx.draw_networkx(gr, pos, node_size=500)
 
 plt.show()
