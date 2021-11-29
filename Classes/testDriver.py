@@ -17,18 +17,21 @@ print("Testing constructor")
 # print("Pass...")
 test = Graph("graph1", adjMatrix)
 print(test)
+print()
 
 # Test getName
 print("Testing getName")
 # print("pass...")
 testName = test.getName()
 print("Name of Graph is = " + testName)
+print()
 
 # Test setName
 print("Testing setName")
-print("Pass...")
-#test.name = "newName"
-print(test.name)
+#print("Pass...")
+test.setName("newName")
+print("New name is: " + test.name)
+print()
 
 # Test insertNode
 print("Testing insertNode")
