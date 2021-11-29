@@ -17,7 +17,8 @@ print("Testing constructor")
 # print("Pass...")
 test = Graph("graph1", adjMatrix)
 print(test)
-print()
+print("Testing out")
+print(test.nodeCount)
 
 # Test getName
 print("Testing getName")
