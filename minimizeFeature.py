@@ -25,9 +25,11 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_num = int(input("choose one file from the available inputs as a number between 0 - 4: "))
+given_num = int(input("choose one file from the available inputs as a number starting with 0: "))
 
 file_name = ""
+
+
 
 for i in range(given_num):
     print(i)
