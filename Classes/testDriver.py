@@ -42,7 +42,10 @@ print("Pass...")
 
 # Test insertEdge
 print("Testing insert edge")
-print("Pass...")
+# print("Pass...")
+print("Adding edge between 1 and 4")
+test.insertEdge(1,4)
+print(test.adjMatrix)
 
 # Test removeNode
 print("Testing removeNode")
