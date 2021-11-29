@@ -67,10 +67,23 @@ class Graph:
 		pass
 	# Remove edge
 	# Removes edge from between two nodes (needs node a, node b, and edge. Need to work on how multiple edges work)
-	def removeEdge(a, b):
+	def removeEdge(self, a, b):
 		# Sets edge value in matrix to 0
-		# adjMatrix.itemset((a,b), 0)
-		pass
+		# Check if the edge values are out of place first
+		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
+			print("Node index out of bounds")
+			return -1
+		
+		# Need to make copy of adjMatrix and then resave it
+		# print(self.adjMatrix)
+		# print(a)
+		# print(b)
+		newMatrix = self.adjMatrix
+		newMatrix[int(a-1),int(b-1)] = 0
+		newMatrix[int(b-1),int(a-1)] = 0
+		print("Edge added between nodes " + str(a) + " and " + str(b))
+		self.adjMatrix = newMatrix
+
 	# Get node
 	# Returns a node in the graph (prob really returns its positon in the adjenccy matrix?)
 	def getNode():
