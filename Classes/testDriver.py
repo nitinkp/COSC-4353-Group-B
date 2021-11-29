@@ -37,7 +37,7 @@ print()
 
 # Test insertNode
 print("Testing insertNode")
-test.insertNode()
+# test.insertNode()
 print("Pass...")
 
 # Test insertEdge
@@ -55,6 +55,8 @@ print("Pass...")
 print("Testing removeEdge")
 test.removeEdge(1,4)
 print("Pass...")
+
+
 
 
 # Testing getNodeCount

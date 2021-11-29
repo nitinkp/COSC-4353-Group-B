@@ -8,7 +8,7 @@ class Graph:
 		self.adjMatrix = adjMatrix
 		self.nodeCount = self.getNodeCount()
 		self.edgeCount = self.getEdgeCount()
-		self.isWeighted = isWeighted
+		self.isWeighted = type(isWeighted)
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
@@ -63,9 +63,21 @@ class Graph:
 			
 	# Remove node
 	# Removes node from graph (needs to remove related edges from node that was removed)
-	def removeNode(value):
+	def removeNode(self,value):
 		# Remove both row and column from adjacency matrix
-		pass
+		if(value < 0 or value > self.nodeCount):
+			print("Node out of bounds")
+			return -1
+		# Create new matrix
+		newMatrix = self.adjMatrix
+		# Delete row first
+		np.delete(newMatrix,value,0)
+		print(newMatrix)
+		# Next delete column
+		np.delete(newMatrix,value,1)
+		print(newMatrix)
+		print("Deleted node " + str(value))
+		
 	# Remove edge
 	# Removes edge from between two nodes (needs node a, node b, and edge. Need to work on how multiple edges work)
 	def removeEdge(self, a, b):
