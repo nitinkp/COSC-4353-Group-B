@@ -14,14 +14,15 @@ adjMatrix = np.array([[0,1,1,0,0],
 # Start!
 # Test Constructor
 print("Testing constructor")
-print("Pass...")
+# print("Pass...")
 test = Graph("graph1", adjMatrix)
 print(test)
 
 # Test getName
 print("Testing getName")
-print("pass...")
-#print(test.name)
+# print("pass...")
+testName = test.getName()
+print("Name of Graph is = " + testName)
 
 # Test setName
 print("Testing setName")
