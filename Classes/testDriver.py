@@ -15,7 +15,7 @@ adjMatrix = np.array([[0,1,1,0,0],
 # Test Constructor
 print("Testing constructor")
 # print("Pass...")
-test = Graph("graph1", adjMatrix)
+test = Graph("graph1", adjMatrix, False)
 print(test)
 print("Testing out")
 print("Node count is: " + str(test.nodeCount))
@@ -49,6 +49,7 @@ print(test.adjMatrix)
 
 # Test removeNode
 print("Testing removeNode")
+test.removeNode(2)
 print("Pass...")
 
 # Test removeEdge
