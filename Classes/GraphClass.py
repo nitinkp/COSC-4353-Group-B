@@ -3,8 +3,8 @@ import pandas
 
 class Graph:
 	# Class that represents the node and edge graph. Also contains functions for adding and removing 	nodes and edges, naming and storing graphs.
-	def __init__(self, nodeCount, edgeCount, name):
-		self.name = name
+	def __init__(graph, nodeCount, edgeCount, name):
+		graph.name = name
 		# Add in more for graph information
 		# Numpy matrix
 		# NEED TO FIX THIS AS PROPER MATRIX
@@ -15,30 +15,30 @@ class Graph:
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
 		
-		
+
 		# Nodes list
 		nodes = []
-		self.nodeCount = nodeCount
+		graph.nodeCount = nodeCount
 		# Edge list
 		edges = []
-		self.edgeCount = edgeCount
+		graph.edgeCount = edgeCount
 
 	# Set name
 	# Set's name of graph
 	def setName(name):
-		self.name = name
+		graph.name = name
 
 	# Get name
 	# Get's name of graph
 	def getName():
-		return self.name
+		return graph.name
 
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
-	def insertNode(self):
+	def insertNode(graph):
 		print(adjMatrix)
 		# Increment the number of nodes we have
-		self.nodes = nodes + 1
+		graph.nodes = nodes + 1
 		# Need to add both row and column of zeros to adjacency matrix
 		# first create row of 0's
 		newRow = np.zeros(nodes)
@@ -87,9 +87,9 @@ class Graph:
 		pass
 	# NodeCount
 	# Gets count of number of nodes in graph
-	def getNodeCount(self):
-		return self.nodeCount
+	def getNodeCount(graph):
+		return graph.nodeCount
 	# EdgeCount
 	# Gets count of number of nodes in graph
 	def getEdgeCount(self):
-		return self.edgeCount
+		return graph.edgeCount
