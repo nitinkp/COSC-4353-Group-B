@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
 import os
 
 INF = 999
@@ -98,6 +100,8 @@ selected_node[0] = True
 # printing for edge and weight
 # print("Edge : Weight\n")
 out = []
+edge_out = []
+edge_out2 = []
 while edges < nodes - 1:
 
     minimum = INF
@@ -113,12 +117,16 @@ while edges < nodes - 1:
                         a = m
                         b = n
     out += [[str(a) + " - " + str(b)] + [str(g[a][b])]]
+    edge_out += [str(a)]
+    edge_out2 += [str(b)]
     df2 = pd.DataFrame(out, columns=["Edge", "Weight"])
     # print(df2)
     # print(out)
     selected_node[b] = True
     edges += 1
 
+print(edge_out)
+print(edge_out2)
 try:
     print("The dataframe for minimum spanning tree graph is: ")
     print(df2)
@@ -126,3 +134,16 @@ try:
     print(selected_node)
 except:
     print("Enter appropriate values for nodes and edges and try again")
+
+# graph for the dataframe
+
+gr = nx.Graph()
+
+for i in range(len(edge_out)):
+    gr.add_edge(edge_out[i], edge_out2[i])
+
+print(nx.info(gr))
+
+nx.draw(gr)
+
+plt.show()
