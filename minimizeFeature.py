@@ -149,6 +149,10 @@ print(nx.info(gr))
 
 pos = nx.spring_layout(gr, seed=7)
 
-nx.draw_networkx(gr, pos, node_size=500)
+nx.draw_networkx_nodes(gr, pos, node_size=700)
+
+nx.draw_networkx_edges(gr, pos, width=6)
+
+nx.draw_networkx_labels(gr, pos, font_size=20, font_family="sans-serif")
 
 plt.show()
