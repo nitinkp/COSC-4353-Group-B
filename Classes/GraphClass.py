@@ -84,6 +84,6 @@ class Graph:
 		# Use numpy to grab the unique count of 1's and 0's
 		unique, count = np.unique(self.adjMatrix, return_counts = True)
 		d = dict(zip(unique, count))
-		edgeCount = (d.get(1))/2
+		edgeCount = int((d.get(1))/2)
 		return edgeCount
 		
