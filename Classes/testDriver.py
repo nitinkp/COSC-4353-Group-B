@@ -15,7 +15,8 @@ adjMatrix = np.array([[0,1,1,0,0],
 # Test Constructor
 print("Testing constructor")
 print("Pass...")
-#test = Graph("graph1",)
+test = Graph("graph1", adjMatrix)
+print(test)
 
 # Test getName
 print("Testing getName")
