@@ -32,7 +32,7 @@ class Graph:
 		# # Reset the current array with new values
 		# # ADD IN NEW COLUMN OF 0's
 		pass
-	
+
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
 	def insertEdge(self, a, b):
@@ -40,11 +40,18 @@ class Graph:
 		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
 			print("Node index out of bounds")
 			return -1
-		else:
-			self.adjMatrix[a,b] = 1
-			self.adjMatrix[b,a] = 1
-			print("Edge added between nodes " + a + " and " + b)
-
+		
+		# Need to make copy of adjMatrix and then resave it
+		# print(self.adjMatrix)
+		# print(a)
+		# print(b)
+		newMatrix = self.adjMatrix
+		newMatrix[int(a-1),int(b-1)] = 1
+		newMatrix[int(b-1),int(a-1)] = 1
+		print("Edge added between nodes " + str(a) + " and " + str(b))
+		self.adjMatrix = newMatrix
+		# print(self.adjMatrix)
+			
 	# Remove node
 	# Removes node from graph (needs to remove related edges from node that was removed)
 	def removeNode(value):
