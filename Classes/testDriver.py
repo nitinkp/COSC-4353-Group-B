@@ -37,7 +37,7 @@ print()
 
 # Test insertNode
 print("Testing insertNode")
-# test.insertNode()
+test.insertNode()
 print("Pass...")
 
 # Test insertEdge

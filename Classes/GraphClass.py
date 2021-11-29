@@ -145,4 +145,6 @@ class Graph:
 		d = dict(zip(unique, count))
 		edgeCount = int((d.get(1))/2)
 		return edgeCount
-		
+	
+	# Output function
+	# Create a csv file
