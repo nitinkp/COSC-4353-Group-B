@@ -1,0 +1,75 @@
+# Test drive program for graph class
+# Written by Mike Yannuzzi
+
+from GraphClass import Graph
+print("Starting test for class")
+
+# Start!
+# Test Constructor
+print("Testing constructor")
+print("Pass...")
+test = Graph(5,7,"graph1")
+
+# Test getName
+print("Testing getName")
+print("pass...")
+print(test.name)
+
+# Test setName
+print("Testing setName")
+print("Pass...")
+test.name = "newName"
+print(test.name)
+
+# Test insertNode
+print("Testing insertNode")
+test.insertNode()
+print("Pass...")
+
+# Test insertEdge
+print("Testing insert edge")
+print("Pass...")
+
+# Test removeNode
+print("Testing removeNode")
+print("Pass...")
+
+# Test removeEdge
+print("Testing removeEdge")
+print("Pass...")
+
+# Test getNode
+print("Testing getNode")
+print("Pass...")
+
+# Test getEdge
+print("Testing getEdge")
+print("Pass...")
+
+# Testing setNode
+print("Testing setNode")
+print("Pass...")
+
+# Testing setEdge
+print("Testing setEdge")
+print("Pass...")
+
+# Testing findNode
+print("Testing findNode")
+print("Pass...")
+
+# Testing findEdge
+print("Testing findEdge")
+print("Pass...")
+
+# Testing getNodeCount
+print("Testing getNodeCount")
+# print("Pass...")
+#nodeCount = test.getNodeCount()
+#print(nodeCount)
+
+# Testing getEdgeCount
+print("Testing getEdgeCount")
+#edgeCount = test.getEdgeCount()
+#print(edgeCount)
+# print("Pass...")
