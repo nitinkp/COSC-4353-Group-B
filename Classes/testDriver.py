@@ -82,6 +82,6 @@ print("Graph has " + str(nodeCount) + " nodes")
 
 # Testing getEdgeCount
 print("Testing getEdgeCount")
-#edgeCount = test.getEdgeCount()
+edgeCount = test.getEdgeCount()
 #print(edgeCount)
 # print("Pass...")
