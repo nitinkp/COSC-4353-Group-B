@@ -6,7 +6,7 @@ class Graph:
 	def __init__(self, name, adjMatrix):
 		self.name = name
 		self.adjMatrix = adjMatrix
-
+		
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
@@ -75,7 +75,9 @@ class Graph:
 	# NodeCount
 	# Gets count of number of nodes in graph
 	def getNodeCount(self):
-		pass
+		# Call dim on passed in matrix to get node count
+		nodeCount = self.adjMatrix.shape
+		return nodeCount
 	# EdgeCount
 	# Gets count of number of nodes in graph
 	def getEdgeCount(self):

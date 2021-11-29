@@ -77,8 +77,8 @@ print("Pass...")
 # Testing getNodeCount
 print("Testing getNodeCount")
 # print("Pass...")
-#nodeCount = test.getNodeCount()
-#print(nodeCount)
+nodeCount = test.getNodeCount()
+print("Graph has " + nodeCount + " nodes")
 
 # Testing getEdgeCount
 print("Testing getEdgeCount")
