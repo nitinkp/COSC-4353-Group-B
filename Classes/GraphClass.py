@@ -3,11 +3,12 @@ import pandas
 
 class Graph:
 	# Class that represents the node and edge graph. Also contains functions for adding and removing 	nodes and edges, naming and storing graphs.
-	def __init__(self, name, adjMatrix):
+	def __init__(self, name, adjMatrix, isWeighted):
 		self.name = name
 		self.adjMatrix = adjMatrix
 		self.nodeCount = self.getNodeCount()
 		self.edgeCount = self.getEdgeCount()
+		self.isWeighted = isWeighted
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
