@@ -103,4 +103,4 @@ try:
     # print(df2.values.tolist())
     print(selected_node)
 except:
-    print("Enter appropriate values for nodes and edges")
+    print("Enter appropriate values for nodes and edges and try again")
