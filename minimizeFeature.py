@@ -139,6 +139,7 @@ gr = nx.Graph()
 
 for i in range(len(edge_out)):
     gr.add_edge(edge_out[i], edge_out2[i], weight=weights[i])
+    # gr[edge_out[i]][edge_out2[i]]['weight'] = weights[i]
 
 # for e in gr.edges():
 #     gr[e[0]][e[1]] = weights[e]
@@ -154,5 +155,8 @@ nx.draw_networkx_nodes(gr, pos, node_size=700)
 nx.draw_networkx_edges(gr, pos, width=6)
 
 nx.draw_networkx_labels(gr, pos, font_size=20, font_family="sans-serif")
+
+labels = nx.get_edge_attributes(gr, 'weight')
+nx.draw_networkx_edge_labels(gr, pos, font_size=20, edge_labels=labels)
 
 plt.show()
