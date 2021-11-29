@@ -3,54 +3,40 @@ import pandas
 
 class Graph:
 	# Class that represents the node and edge graph. Also contains functions for adding and removing 	nodes and edges, naming and storing graphs.
-	def __init__(graph, nodeCount, edgeCount, name):
-		graph.name = name
-		# Add in more for graph information
-		# Numpy matrix
-		# NEED TO FIX THIS AS PROPER MATRIX
-		#adjMatrix = np.arrange(6)
-		adjMatrix = np.array([[0,1,1,0,0],
-							[1,0,1,1,1],
-							[1,1,0,1,0],
-							[0,1,1,0,1],
-							[0,1,0,1,0]])
-		
-
-		# Nodes list
-		nodes = []
-		graph.nodeCount = nodeCount
-		# Edge list
-		edges = []
-		graph.edgeCount = edgeCount
+	def __init__(self, name, adjMatrix):
+		self.name = name
+		self.adjMatrix = adjMatrix
 
 	# Set name
 	# Set's name of graph
-	def setName(name):
-		graph.name = name
+	def setName(self,name):
+		self.name = name
 
 	# Get name
 	# Get's name of graph
-	def getName():
-		return graph.name
+	def getName(self):
+		return self.name
 
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
-	def insertNode(graph):
-		print(adjMatrix)
-		# Increment the number of nodes we have
-		graph.nodes = nodes + 1
-		# Need to add both row and column of zeros to adjacency matrix
-		# first create row of 0's
-		newRow = np.zeros(nodes)
-		# Append this to the end of the current matrix
-		print(adjMatrix.append(adjMatrix, nodes))
-		# Reset the current array with new values
-		# ADD IN NEW COLUMN OF 0's
+	def insertNode(self):
+		# print(adjMatrix)
+		# # Increment the number of nodes we have
+		# graph.nodes = nodes + 1
+		# # Need to add both row and column of zeros to adjacency matrix
+		# # first create row of 0's
+		# newRow = np.zeros(nodes)
+		# # Append this to the end of the current matrix
+		# print(adjMatrix.append(adjMatrix, nodes))
+		# # Reset the current array with new values
+		# # ADD IN NEW COLUMN OF 0's
+		pass
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
 	def insertEdge(a,b):
-		# Sets edge value between two nodes to 1
-		adjMatrix.itemset((a,b), 1)
+		# # Sets edge value between two nodes to 1
+		# adjMatrix.itemset((a,b), 1)
+		pass
 	# Remove node
 	# Removes node from graph (needs to remove related edges from node that was removed)
 	def removeNode(value):
@@ -60,7 +46,8 @@ class Graph:
 	# Removes edge from between two nodes (needs node a, node b, and edge. Need to work on how multiple edges work)
 	def removeEdge(a, b):
 		# Sets edge value in matrix to 0
-		adjMatrix.itemset((a,b), 0)
+		# adjMatrix.itemset((a,b), 0)
+		pass
 	# Get node
 	# Returns a node in the graph (prob really returns its positon in the adjenccy matrix?)
 	def getNode():
@@ -87,9 +74,9 @@ class Graph:
 		pass
 	# NodeCount
 	# Gets count of number of nodes in graph
-	def getNodeCount(graph):
-		return graph.nodeCount
+	def getNodeCount(self):
+		pass
 	# EdgeCount
 	# Gets count of number of nodes in graph
 	def getEdgeCount(self):
-		return graph.edgeCount
+		pass

@@ -2,28 +2,35 @@
 # Written by Mike Yannuzzi
 
 from GraphClass import Graph
+import numpy as np
 print("Starting test for class")
+
+adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
 
 # Start!
 # Test Constructor
 print("Testing constructor")
 print("Pass...")
-test = Graph(5,7,"graph1")
+#test = Graph("graph1",)
 
 # Test getName
 print("Testing getName")
 print("pass...")
-print(test.name)
+#print(test.name)
 
 # Test setName
 print("Testing setName")
 print("Pass...")
-test.name = "newName"
+#test.name = "newName"
 print(test.name)
 
 # Test insertNode
 print("Testing insertNode")
-test.insertNode()
+#test.insertNode()
 print("Pass...")
 
 # Test insertEdge
