@@ -77,7 +77,7 @@ class Graph:
 	def getNodeCount(self):
 		# Call dim on passed in matrix to get node count
 		nodeCount = self.adjMatrix.shape
-		return nodeCount
+		return nodeCount[0]
 	# EdgeCount
 	# Gets count of number of nodes in graph
 	def getEdgeCount(self):
