@@ -8,7 +8,23 @@ Work in progress:
 
 1.
 2. 
-3. 
+3. Allows users to manipulate graph data structures:
+   -Graph Quest's main features revolve around the graph data structure. Graph Quest does most of its work through adjacency matrices which can represent a multitude of node and      edge graphs. These graphs include unweighted, weighted, and directional graphs.
+   Along with representing the graphs through adjacency matrices, Graph Question can also:
+   -Insert nodes
+   -Remove nodes
+   -Insert edges
+   -Remove edges
+   -Set edge weights
+   -Set the graph name
+   -Get the node and edge count
 4. 
-5. Allows user to perform search and other graph algorithms such as Breadth first search, Depth first search, Djikstra's and Cycle detection on graph data structure
-6. Can create pictures of graphs using NetworkX
+5. Allows user to perform search and other graph algorithms:
+   -Graph Quest has a growing library of algorithms that you can perform on your graph datastructure. 
+    Right now Graph quest can perform:
+   -Breathd First Search (BFS)
+   -Depth First Search (DPS)
+   -Kruscal's Minimum Spanning tree (MST)
+   -Cycle Detection
+6. Allows users to create visualizations of their graphs.
+   -Graph Quest uses the NetworkX library to allow you to visualize your graphs. In the code you can take your adjacency matrix and feed it into one of our functions to produce a     with the NetworkX library. This feature supports both weighted and unweighted graphs.
