@@ -16,7 +16,7 @@ given_num = int(input("enter a number between 0 to 4 to search in the graph: "))
 
 
 g = file_to_mat.file_to_matrix(input_folder, given_file)
-# print(type(g))
+# print(g)
 
 
 def matrix_to_list(matrix_input):
@@ -51,5 +51,6 @@ def bfs(graph, v):
 
 
 gr = matrix_to_list(g)
+# print(gr)
 print("The breadth first search result on the given number is: ")
 print(bfs(gr, given_num))
