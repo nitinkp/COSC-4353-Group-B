@@ -23,6 +23,7 @@ class Graph:
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
 	def insertNode(self):
+		# New idea, create an array of 0's one row and column bigger than the original and copy the values over
 		newMatrix = self.adjMatrix
 		print(newMatrix)
 		print()
