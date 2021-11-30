@@ -13,3 +13,7 @@ class TestBfs(unittest.TestCase):
 
     def test_inputList(self):
         self.assertTrue(bfs.inputs_list)  # testing whether the files from the provided folder and importing or not
+
+
+if __name__ == '__main__':
+    unittest.main()

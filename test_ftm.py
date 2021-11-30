@@ -12,3 +12,7 @@ class TestFtm(unittest.TestCase):
     def test_ftm_bfs(self):
         res = ftm.file_to_matrix(bfs.input_folder, bfs.given_file)
         self.assertIsInstance(res, list)
+
+
+if __name__ == '__main__':
+    unittest.main()
