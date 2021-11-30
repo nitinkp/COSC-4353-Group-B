@@ -117,6 +117,7 @@ class TestGraph(unittest.TestCase):
         pass
 
     def test_getEdgeWeight(self):
+        # Test for both weighted and unweighted
         adjMatrix = np.array([[0,1,1,0,0],
 							[1,0,1,1,1],
 							[1,1,0,1,0],
