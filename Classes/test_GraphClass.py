@@ -152,7 +152,9 @@ class TestGraph(unittest.TestCase):
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
-        pass
+        newMatrix = test.getMatrix()
+        self.assertTrue(np.array_equal(test.adjMatrix,newMatrix))
+        
 
     def test_save(self):
         PATH = './adjMatrix.csv'
