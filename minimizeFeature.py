@@ -32,24 +32,6 @@ given_file = int(input("choose one file from the available inputs as a number st
 #
 g = file_to_mat.file_to_matrix(input_folder, given_file)
 #
-# for i in range(given_num):
-#     print(i)
-#     try:
-#         file_name = inputs_list[i + 1]
-#     except:
-#         print("Provide input from given files")
-#
-# # print(file_name)
-# # cons = []
-# # con = ""
-# with open(file_name) as r:
-#     try:
-#         cons = r.read()
-#         # print(cons)
-#         # con += cons
-#     except:
-#         pass
-# i = i + 1
 
 # adj_list[] = {{1->2->5}, {2->1,3,5,6}
 # {3->2,4,6}
