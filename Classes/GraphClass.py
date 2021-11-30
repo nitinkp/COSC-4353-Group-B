@@ -10,6 +10,7 @@ class Graph:
 		self.edgeCount = self.getEdgeCount()
 		self.isWeighted = type(isWeighted)
 		self.isDirected = type(isDirected)
+
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
@@ -52,17 +53,12 @@ class Graph:
 		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
 			print("Node index out of bounds")
 			return -1
-		
-		# Need to make copy of adjMatrix and then resave it
-		# print(self.adjMatrix)
-		# print(a)
-		# print(b)
+
 		newMatrix = self.adjMatrix
 		newMatrix[int(a-1),int(b-1)] = 1
 		newMatrix[int(b-1),int(a-1)] = 1
 		print("Edge added between nodes " + str(a) + " and " + str(b))
 		self.adjMatrix = newMatrix
-		# print(self.adjMatrix)
 			
 	# Remove node
 	# Removes node from graph (needs to remove related edges from node that was removed)
@@ -91,10 +87,6 @@ class Graph:
 			print("Node index out of bounds")
 			return -1
 		
-		# Need to make copy of adjMatrix and then resave it
-		# print(self.adjMatrix)
-		# print(a)
-		# print(b)
 		newMatrix = self.adjMatrix
 		newMatrix[int(a-1),int(b-1)] = 0
 		newMatrix[int(b-1),int(a-1)] = 0
@@ -115,10 +107,6 @@ class Graph:
 			print("Node index out of bounds")
 			return -1
 		
-		# Need to make copy of adjMatrix and then resave it
-		# print(self.adjMatrix)
-		# print(a)
-		# print(b)
 		newMatrix = self.adjMatrix
 		newMatrix[int(a-1),int(b-1)] = weight
 		newMatrix[int(b-1),int(a-1)] = weight
@@ -140,12 +128,14 @@ class Graph:
 			return -1
 		weight = self.adjMatrix[int(a), int(b)]
 		return weight
+
 	# NodeCount
 	# Gets count of number of nodes in graph
 	def getNodeCount(self):
 		# Call dim on passed in matrix to get node count
 		nodeCount = self.adjMatrix.shape
 		return nodeCount[0]
+		
 	# EdgeCount
 	# Gets count of number of nodes in graph
 	def getEdgeCount(self):
