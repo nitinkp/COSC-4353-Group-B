@@ -142,8 +142,8 @@ class TestGraph(unittest.TestCase):
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
-        
-        pass
+        edgeCount = test.getEdgeCount()
+        self.assertEqual(edgeCount,7)
 
     def test_getMatrix(self):
         adjMatrix = np.array([[0,1,1,0,0],
