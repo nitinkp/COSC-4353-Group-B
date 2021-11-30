@@ -50,7 +50,8 @@ class TestGraph(unittest.TestCase):
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
-        pass
+        test.insertEdge(1,1)
+        self.assertEqual(test.adjMatrix(0,0), 1)
 
     def test_removeNode(self):
         adjMatrix = np.array([[0,1,1,0,0],
