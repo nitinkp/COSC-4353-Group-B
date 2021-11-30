@@ -112,7 +112,7 @@ while edges < nodes - 1:
     weights += [str(g[a][b])]
     df2 = pd.DataFrame(out, columns=["Edge", "Weight"])
     # print(df2)
-    # print(out)
+    print("out", out)
     selected_node[b] = True
     edges += 1
 
@@ -141,7 +141,7 @@ for i in range(len(edge_out)):
 #
 # nx.set_edge_attributes(gr, values=weights, name='weight')
 
-print(nx.info(gr))
+print("It is going to show a", nx.info(gr))
 
 pos = nx.spring_layout(gr, seed=7)
 
