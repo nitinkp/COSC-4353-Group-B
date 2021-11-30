@@ -11,7 +11,7 @@ class TestGraph(unittest.TestCase):
 
     def test_getName(self):
         matrix = np.array(1,1)
-        test = Graph("TestGraph",)
+        test = Graph("TestGraph", )
     
     def test_insertNode(self):
         pass
