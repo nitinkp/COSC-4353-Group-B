@@ -27,10 +27,10 @@ def file_to_matrix(folder_input, num):
                 cons = r.read()
             except:
                 print("no contents")
-                pass
+                sys.exit(1)
     except:
         print("no file input")
-        pass
+        sys.exit(1)
 
     li = cons.split('\n')
     li2 = [e.split(',') for e in li]
