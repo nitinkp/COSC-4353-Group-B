@@ -1,4 +1,5 @@
 import numpy as np
+from numpy.lib.shape_base import expand_dims
 import pandas
 
 class Graph:
@@ -24,28 +25,16 @@ class Graph:
 	# Insert node
 	# Inserts node into graph (need to figure out about edge connections)
 	def insertNode(self):
+		copyMatrix = self.adjMatrix
 		# New idea, create an array of 0's one row and column bigger than the original and copy the values over
-		newMatrix = self.adjMatrix
-		print(newMatrix)
-		print()
-		an_array = self.adjMatrix
-		shape = np.shape(an_array)
-		padded_array = np.zeros((int(self.nodeCount),int(self.nodeCount)))
-		padded_array[:shape[0],:shape[1]] = an_array
-		print(padded_array)
-		# # Create new row to add
-		# newRow = np.zeros(self.nodeCount, dtype=int)
-		# print(newRow)
-		# # Append row
-		# newMatrix = np.insert(newMatrix,self.nodeCount,newRow,axis=0)
-		# self.nodeCount = self.nodeCount+1
-		# print(newMatrix)
-		# # Create and append column
-		# newCol = np.zeros(self.nodeCount,dtype=int).T
-		# print(newCol)
-		# newMatrix = np.append(newMatrix, newCol, axis=1)
-		# print(newMatrix)
-
+		newMatrix = np.zeros((int(self.nodeCount+1), int(self.nodeCount+1)),dtype=int)
+		# loop through and add in values from previous matrix to new one
+		for i in range(self.nodeCount):
+			for j in range(self.nodeCount):
+				newMatrix[i][j] = copyMatrix[i][j]
+		# Set new matrix values
+		self.adjMatrix = newMatrix
+		
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
 	def insertEdge(self, a, b):
@@ -91,7 +80,6 @@ class Graph:
 		newMatrix[int(a-1),int(b-1)] = 0
 		newMatrix[int(b-1),int(a-1)] = 0
 		print("Edge removed between nodes " + str(a) + " and " + str(b))
-		print(self.adjMatrix)
 		self.adjMatrix = newMatrix
 
 	# Set edge weight
@@ -111,7 +99,6 @@ class Graph:
 		newMatrix[int(a-1),int(b-1)] = weight
 		newMatrix[int(b-1),int(a-1)] = weight
 		print("Edge weight between nodes " + str(a) + " and " + str(b) + "changed to: " + str(weight))
-		print(self.adjMatrix)
 		self.adjMatrix = newMatrix
 	
 	# Get edge weight
