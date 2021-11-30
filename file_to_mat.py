@@ -1,9 +1,9 @@
 import os
 
+inputs_list = []
+
 
 def file_to_matrix(folder_input, num):
-    inputs_list = []
-
     for f1, f2, f3 in os.walk(folder_input):
         for file in f3:
             inputs_list.append(os.path.join(f1, file))
