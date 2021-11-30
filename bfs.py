@@ -10,17 +10,18 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_file = int(input("choose one file from the available inputs as a number starting with 0: "))
+given_file = int(input("choose one file from the available inputs as a number starting with 1: "))
 
 given_num = int(input("enter a number between 0 to 4 to search in the graph: "))
 
 
 g = file_to_mat.file_to_matrix(input_folder, given_file)
+# print(type(g))
 
 
-def matrix_to_list(g):
+def matrix_to_list(matrix_input):
     graph = {}
-    for i, node in enumerate(g):
+    for i, node in enumerate(matrix_input):
         adj = []
         for j, connected in enumerate(node):
             if connected:
