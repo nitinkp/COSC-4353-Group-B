@@ -3,6 +3,7 @@
 
 from GraphClass import Graph
 import numpy as np
+import AlgorithmsClass as algo
 print("Starting test for class")
 
 adjMatrix = np.array([[0,1,1,0,0],
@@ -82,3 +83,6 @@ test.save()
 print("Testing get matrix")
 matrix = test.getMatrix()
 print(matrix)
+
+# Testing algorithms
+# Detect cycle algorithm

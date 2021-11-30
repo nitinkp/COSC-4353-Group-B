@@ -3,12 +3,13 @@ import pandas
 
 class Graph:
 	# Class that represents the node and edge graph. Also contains functions for adding and removing 	nodes and edges, naming and storing graphs.
-	def __init__(self, name, adjMatrix, isWeighted):
+	def __init__(self, name, adjMatrix, isWeighted, isDirected):
 		self.name = name
 		self.adjMatrix = adjMatrix
 		self.nodeCount = self.getNodeCount()
 		self.edgeCount = self.getEdgeCount()
 		self.isWeighted = type(isWeighted)
+		self.isDirected = type(isDirected)
 	# Set name
 	# Set's name of graph
 	def setName(self,name):
@@ -23,18 +24,25 @@ class Graph:
 	# Inserts node into graph (need to figure out about edge connections)
 	def insertNode(self):
 		newMatrix = self.adjMatrix
-		# Create new row to add
-		newRow = np.zeros(self.nodeCount, dtype=int)
-		print(newRow)
-		# Append row
-		newMatrix = np.insert(newMatrix,self.nodeCount,newRow,axis=0)
-		self.nodeCount = self.nodeCount+1
 		print(newMatrix)
-		# Create and append column
-		newCol = np.zeros(self.nodeCount,dtype=int).T
-		print(newCol)
-		newMatrix = np.append(newMatrix, newCol, axis=1)
-		print(newMatrix)
+		print()
+		an_array = self.adjMatrix
+		shape = np.shape(an_array)
+		padded_array = np.zeros((int(self.nodeCount),int(self.nodeCount)))
+		padded_array[:shape[0],:shape[1]] = an_array
+		print(padded_array)
+		# # Create new row to add
+		# newRow = np.zeros(self.nodeCount, dtype=int)
+		# print(newRow)
+		# # Append row
+		# newMatrix = np.insert(newMatrix,self.nodeCount,newRow,axis=0)
+		# self.nodeCount = self.nodeCount+1
+		# print(newMatrix)
+		# # Create and append column
+		# newCol = np.zeros(self.nodeCount,dtype=int).T
+		# print(newCol)
+		# newMatrix = np.append(newMatrix, newCol, axis=1)
+		# print(newMatrix)
 
 	# Insert edge
 	# Inserts edge into graph (needs a source node and destination node, undirected or directed, can be self referencing)
@@ -97,6 +105,9 @@ class Graph:
 	# Sets the value and direction of an edge between two nodes (or one node if self referencing)
 	def setEdgeWeight(self, a, b, weight):
 		# CHECK IF WEIGHTED GRAPH
+		if(self.isWeighted != True):
+			print("Cannot be done on an unweighted graph...")
+			return
 		# Sets edge value in matrix to 0
 		# Check if the edge values are out of place first
 		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
@@ -117,7 +128,10 @@ class Graph:
 	# Get edge weight
 	# Get's edge weight between two nodes
 	def getEdgeWeight(self, a, b):
-				# CHECK IF WEIGHTED GRAPH
+		# CHECK IF WEIGHTED GRAPH
+		if(self.isWeighted != True):
+			print("Cannot be done on an unweighted graph...")
+			return
 		# Sets edge value in matrix to 0
 		# Check if the edge values are out of place first
 		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
