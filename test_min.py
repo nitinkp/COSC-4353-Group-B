@@ -1,10 +1,11 @@
 import unittest
-import minimizeFeature
+import minimizeFeature as mf
 
 
 class TestMin(unittest.TestCase):
-    def test_min(self):
-        pass
+    def test_nodes(self):
+        n = mf.nodes
+        self.assertIsInstance(n, int)
 
 
 if __name__ == '__main__':

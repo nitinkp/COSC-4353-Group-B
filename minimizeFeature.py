@@ -4,12 +4,17 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import os
 import file_to_mat
+import sys
 
 INF = 999
-# number of vertices in graph
-nodes = int(input("Enter number of nodes: "))
-# creating graph by adjacency matrix method
-edges = int(input("Enter number of edges: "))
+try:
+    # number of vertices in graph
+    nodes = int(input("Enter number of nodes: "))
+    # creating graph by adjacency matrix method
+    edges = int(input("Enter number of edges: "))
+except:
+    print("enter integers only")
+    sys.exit(1)
 
 # g = np.array([[0, 19, 5, 0, 0],
 #               [19, 0, 5, 9, 2],
@@ -115,6 +120,7 @@ try:
     print(selected_node)
 except:
     print("Enter appropriate values for nodes and edges and try again")
+    sys.exit(1)
 
 # graph for the dataframe
 

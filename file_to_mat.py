@@ -1,4 +1,5 @@
 import os
+import sys
 
 inputs_list = []
 
@@ -16,6 +17,7 @@ def file_to_matrix(folder_input, num):
             file_name = inputs_list[i + 1]
         except:
             print("Provide input from given files")
+            sys.exit(1)
 
     cons = ""
 
