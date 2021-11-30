@@ -1,6 +1,7 @@
 import unittest
 from GraphClass import Graph
 import numpy as np
+import os
 
 class TestGraph(unittest.TestCase):
 
@@ -152,12 +153,20 @@ class TestGraph(unittest.TestCase):
         pass
 
     def test_save(self):
+        PATH = './adjMatrix.csv'
         adjMatrix = np.array([[0,1,1,0,0],
 							[1,0,1,1,1],
 							[1,1,0,1,0],
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
+        test.save()
+        if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
+            flag = True
+        else: 
+            flag = False
 
-        pass
+        # Should check the file exists and return true, which is then checked by the test
+        self.assertTrue(flag)
+        
 
