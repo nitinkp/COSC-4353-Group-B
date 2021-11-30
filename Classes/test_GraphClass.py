@@ -74,8 +74,16 @@ class TestGraph(unittest.TestCase):
 							[1,1,0,1,0],
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
+
+        newMatrix = np.array([[0,1,0,0,0],
+							[1,0,1,1,1],
+							[0,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+
         test = Graph("TestGraph", adjMatrix, False, False)
-        pass
+        test.removeEdge(3,1)
+        self.assertTrue(np.array_equal(test.adjMatrix,newMatrix))
 
     def test_setEdgeWeight(self):
         adjMatrix = np.array([[0,1,1,0,0],
