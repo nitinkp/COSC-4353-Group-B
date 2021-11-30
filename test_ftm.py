@@ -13,6 +13,9 @@ class TestFtm(unittest.TestCase):
         res = ftm.file_to_matrix(bfs.input_folder, bfs.given_file)
         self.assertIsInstance(res, list)
 
+    # def test_range(self):
+    #     self.assertRaises(IndexError, ftm.file_to_matrix, bfs.input_folder, -1)
+
 
 if __name__ == '__main__':
     unittest.main()

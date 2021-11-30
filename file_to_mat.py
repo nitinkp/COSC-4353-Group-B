@@ -17,13 +17,18 @@ def file_to_matrix(folder_input, num):
         except:
             print("Provide input from given files")
 
-    with open(file_name) as r:
-        try:
-            cons = r.read()
+    cons = ""
 
-        except:
-            pass
-    i = i + 1
+    try:
+        with open(file_name) as r:
+            try:
+                cons = r.read()
+            except:
+                print("no contents")
+                pass
+    except:
+        print("no file input")
+        pass
 
     li = cons.split('\n')
     li2 = [e.split(',') for e in li]
