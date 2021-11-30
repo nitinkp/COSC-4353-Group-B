@@ -86,12 +86,33 @@ class TestGraph(unittest.TestCase):
         self.assertTrue(np.array_equal(test.adjMatrix,newMatrix))
 
     def test_setEdgeWeight(self):
+        # Create object with weighted graph
+        # Test with both weight and unweighted
+
+        # Unweighted
         adjMatrix = np.array([[0,1,1,0,0],
 							[1,0,1,1,1],
 							[1,1,0,1,0],
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
+        unweighted = test.setEdgeWeight(1,1,4)
+        self.assertEqual(unweighted, -1)
+
+        # Weighted
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, True, False)
+        unweighted = test.setEdgeWeight(1,1,4)
+        newMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        #self.assertTrue()
         pass
 
     def test_getEdgeWeight(self):
@@ -137,5 +158,6 @@ class TestGraph(unittest.TestCase):
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
+
         pass
 
