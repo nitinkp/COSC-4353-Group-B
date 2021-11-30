@@ -21,35 +21,106 @@ class TestGraph(unittest.TestCase):
 							[0,1,1,0,1],
 							[0,1,0,1,0]])
         test = Graph("TestGraph", adjMatrix, False, False)
-        pass
+        name = test.getName()
+        self.assertEqual(name, "TestGraph1")
     
     def test_insertNode(self):
-        pass
+        # Check both number of nodes and the matrices are equal
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+
+        newMatrix = np.array([[0,1,1,0,0,0],
+							[1,0,1,1,1,0],
+							[1,1,0,1,0,0],
+							[0,1,1,0,1,0],
+							[0,1,0,1,0,0]
+                            [0,0,0,0,0,0]])
+
+        test = Graph("TestGraph", adjMatrix, False, False)
+        self.assertEquals(int(test.nodeCount), 6)
+        self.assertTrue(np.array_equal(test.adjMatrix,newMatrix))
 
     def test_insertEdge(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_removeNode(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_removeEdge(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_setEdgeWeight(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_getEdgeWeight(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_getNodeCount(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_getEdgeCount(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_getMatrix(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
     def test_save(self):
+        adjMatrix = np.array([[0,1,1,0,0],
+							[1,0,1,1,1],
+							[1,1,0,1,0],
+							[0,1,1,0,1],
+							[0,1,0,1,0]])
+        test = Graph("TestGraph", adjMatrix, False, False)
         pass
 
