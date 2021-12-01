@@ -18,3 +18,9 @@ In the Graph Quest github page there is a main.py python file. This file acts as
 
 # What if I have questions or need support?:
 If you have questions about the project you can contact the developers here by creating a ticket with the library.
+
+
+## Contributers:
+Michael Yannuzzi - myannuzzi
+Cherish Dayala - cherishdayala
+Nithin Kumar Pamidimukkala- nitinkp
