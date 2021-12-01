@@ -7,4 +7,4 @@ install:
   
 script:
   - python main.py
-  - python test_GraphClass.py
+  - python test_bfs.py
