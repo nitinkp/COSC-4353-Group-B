@@ -4,7 +4,7 @@ Graph quest! [![Build Status](https://app.travis-ci.com/myannuzzi/COSC-4353-Grou
 
 
 # About Graph Quest:
-Graph quest is a graph data manipulation and visualization library for Python. Graph Quest allows you to input a file, turn it into a pandas dataframe, and then turn it into an adjacency matrix. Graph Quest comes with other features as well. Graph quest allows for users to create graph data structures, perform graph based functions on them (insert and remove nodes, insert and removed edges) and perform graph algorithms on the data structures. Graph quest also allows you to perform other library functions on the graph data structure. These functions are from the libararies Pandas, Numpy, and NetworkX.
+Graph quest is a graph data manipulation and visualization library for Python. Graph Quest allows you to input a file, turn it into a pandas dataframe, and then turn it into an adjacency matrix. Graph Quest comes with other features as well. Graph quest allows for users to create graph data structures, perform graph based functions on them (insert and remove nodes, insert and removed edges) and perform graph algorithms on the data structures. Graph quest also allows you to perform other library functions on the graph data structure. These functions are from the libraries Pandas, Numpy, and NetworkX.
 
 
 # What tools are being used to run Graph Quest:
