@@ -3,7 +3,7 @@
 
 Graph quest!
 
-About Graph Quest:
+#About Graph Quest:
 Graph quest is a graph data manipulation and visualization library for Python. Graph Quest allows you to input a file, turn it into a pandas dataframe, and then turn it into an adjacency matrix. 
 
 
