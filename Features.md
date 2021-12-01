@@ -1,4 +1,4 @@
-Features:
+# Features:
 1. Allows users to read in a text file or csv file adjacency matrix and create a graph data structure from it. The graph data structure read in can be turned into an adjacency matrix which can be used with out graph data structure. The 
 
 2. Allows users to input a multi-line string from a file and then convert it into an adjacency matrix. This adjacency matrix can be used with both the graph data structure, which provides several base graph functions (insertion, deletion, etc.) as well as can be used with the bfs and kruscal's algorithms programs. Both of which perform functions on the graph data structure.
