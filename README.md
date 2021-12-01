@@ -28,3 +28,8 @@ Nithin Kumar Pamidimukkala- nitinkp <br />
 Arno Dunstatter <br />
 Mark Le &copy; <br />
 Santos Garcia <br />
+
+
+### Note:
+- Tests running are in root of repo. Programs in class folder require user input
+- More updates to come soon

@@ -10,9 +10,13 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_file = int(input("choose one file from the available inputs as a number starting with 1: "))
+# given_file = int(input("choose one file from the available inputs as a number starting with 1: "))
+given_file = 1
 
-given_num = int(input("enter a number between 0 to 4 to search in the graph: "))
+# given_num = int(input("enter a number between 0 to 4 to search in the graph: "))
+given_num = 1 
+
+#  for the purpose of testing, instead of taking user input I am passing an integer
 
 
 g = file_to_mat.file_to_matrix(input_folder, given_file)
