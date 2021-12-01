@@ -1,4 +1,4 @@
-Datasets - collections or sets of data or information,
+Datasets - collections or sets of data or information, \n
 CSV files - comma separated value file. A file that is a list of information that is delimited by commas. These files are saved as .csv,
 txt files - files that are just text and are saved as .txt,
 python - the python programming language. This language is the main language for the project,
