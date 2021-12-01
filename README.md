@@ -21,6 +21,6 @@ If you have questions about the project you can contact the developers here by c
 
 
 ## Contributers:
-Michael Yannuzzi - myannuzzi
-Cherish Dayala - cherishdayala
-Nithin Kumar Pamidimukkala- nitinkp
+Michael Yannuzzi - myannuzzi <br />
+Cherish Dayala - cherishdayala <br />
+Nithin Kumar Pamidimukkala- nitinkp <br />
