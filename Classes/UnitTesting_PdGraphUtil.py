@@ -5,6 +5,24 @@ import pandas as pd
 import os
 
 class TestGraph(unittest.TestCase):
+     def test_df_to_adj_matrix(self):
+        df = pd.DataFrame([["A", "B"], ["A", "C"], ["A", "D"], ["A", "D"], ["B", "D"], ["C", "A"],  ["Z", "B"]],
+                          columns=["Column1", "Column2"])
+        df_adj_mat = df_to_adj_matrix(df.Column1, df.Column2)
+        headers = ['A', 'B', 'C', 'D', 'Z']
+        expected_adj_mat = np.array([
+            [0, 1, 1, 2, 0],
+            [0, 0, 0, 1, 0],
+            [1, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 0]
+        ])
+        d_types = {"A": np.int64, "B": np.int64,
+                   "C": np.int64, "D": np.int64, "Z": np.int64, }
+        expected_df = pd.DataFrame(data=expected_adj_mat,
+                                   index=headers,
+                                   columns=headers).astype(d_types)
+        self.assertTrue(expected_df.equals(df_adj_mat))
   def test_get_edgelist_from_graph(self):
     script_dir = os.path.dirname(__file__)  
     input_file = script_dir + "/Datasets/graph1list.txt"
