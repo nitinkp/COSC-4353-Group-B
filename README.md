@@ -1,6 +1,6 @@
 # COSC-4353-Group-B - Graph Quest!
 
-Graph quest! [![Build Status](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B.svg?branch=main)](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B)
+Graph Quest is [![Build Status](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B.svg?branch=main)](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B)
 
 
 # About Graph Quest:
