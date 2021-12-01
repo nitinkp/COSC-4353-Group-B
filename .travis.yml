@@ -3,7 +3,8 @@ python:
   - 3.9
   
 install:
-  - pip install pandas numpy
+  - pip install pandas numpy networkx[default]
   
 script:
   - python main.py
+  - python test_GraphClass.py
