@@ -1,6 +1,9 @@
-Datasets - collections or sets of data or information, \n
+Datasets - collections or sets of data or information, 
+
 CSV files - comma separated value file. A file that is a list of information that is delimited by commas. These files are saved as .csv,
+
 txt files - files that are just text and are saved as .txt,
+
 python - the python programming language. This language is the main language for the project,
 Data Science - Field for preparing data for data analysis, including cleansing data, aggregating, and manipulating data.,
 Pandas - Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the python programming language. https://pandas.pydata.org/ ,
