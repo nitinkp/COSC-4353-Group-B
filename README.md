@@ -26,5 +26,5 @@ Nithin Kumar Pamidimukkala- nitinkp <br />
 
 ## Special thanks to:
 Arno Dunstatter <br />
-Mark Le <br />
+Mark Le &copy; <br />
 Santos Garcia <br />
