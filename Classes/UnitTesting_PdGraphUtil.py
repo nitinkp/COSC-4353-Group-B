@@ -59,6 +59,7 @@ class TestGraph(unittest.TestCase):
         expected_adj_mat = np.array([[0, 1, 1, 0, 0], [1, 0, 1, 1, 1], [
                                     1, 1, 0, 1, 0], [0, 1, 1, 0, 1], [0, 1, 0, 1, 0]])
         self.assertTrue(np.array_equal(adj_mat, expected_adj_mat))
+        
 
     def test_csv_to_numpy_adjmat(self):
         script_dir = os.path.dirname(__file__)
