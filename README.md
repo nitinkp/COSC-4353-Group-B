@@ -1,7 +1,7 @@
-# COSC-4353-Group-B
-[![Build Status](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B.svg?branch=main)](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B)
+# COSC-4353-Group-B - Graph Quest!
 
-Graph quest!
+Graph quest! [![Build Status](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B.svg?branch=main)](https://app.travis-ci.com/myannuzzi/COSC-4353-Group-B)
+
 
 # About Graph Quest:
 Graph quest is a graph data manipulation and visualization library for Python. Graph Quest allows you to input a file, turn it into a pandas dataframe, and then turn it into an adjacency matrix. 
