@@ -9,5 +9,5 @@ script:
   - python main.py
   - python test_bfs.py
   - python test_min.py
-  - python test_Dijkstras.py
-  - python test_PdGraphUtil.py
+  # - python test_Dijkstras.py
+  # - python test_PdGraphUtil.py
