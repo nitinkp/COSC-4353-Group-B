@@ -7,7 +7,7 @@ class TestGraph(unittest.TestCase):
 
     def test_dijkstra(self):
         script_dir = os.path.dirname(__file__)  
-        input_file1 = script_dir + "Classes/Datasets/graph1weightedMat.csv"
+        input_file1 = script_dir + "/Classes/Datasets/graph1weightedMat.csv"
         shortest_path1 = dijkstra(input_file1, 0)
         expected_path1 = np.array([[0, 1], [0, 1, 2], [0, 1, 3], [0, 1, 4]])
         self.assertTrue(np.array_equal(shortest_path1,expected_path1))
