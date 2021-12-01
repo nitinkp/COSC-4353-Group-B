@@ -16,6 +16,7 @@ class TestGraph(unittest.TestCase):
         shortest_path2 = dijkstra(input_file2, 0)
         expected_path2 = np.array([[0, 1], [0, 2], [0, 4, 5, 3], [0, 4], [0, 4, 5]])
         self.assertTrue(np.array_equal(shortest_path2,expected_path2))
+        
 
 if __name__ == '__main__':
     unittest.main()
