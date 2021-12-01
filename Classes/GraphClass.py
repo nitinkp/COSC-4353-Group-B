@@ -72,7 +72,7 @@ class Graph:
 	def removeEdge(self, a, b):
 		# Sets edge value in matrix to 0
 		# Check if the edge values are out of place first
-		if((a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1)):
+		if (a > self.nodeCount or a < 1) or (b > self.nodeCount or b < 1):
 			print("Node index out of bounds")
 			return -1
 		
