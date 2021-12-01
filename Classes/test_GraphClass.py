@@ -173,5 +173,6 @@ class TestGraph(unittest.TestCase):
 
         # Should check the file exists and return true, which is then checked by the test
         self.assertTrue(flag)
-        
-
+	
+if __name__ == '__main__':
+	unittest.main()
