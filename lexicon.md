@@ -14,6 +14,6 @@ graphs - a data structure that represents data in the form of edges and nodes. N
 
 Data frames - a data structure used by the python pandas library. The data frame is extensible and can be extended.,
 
-Graph Visualization - The ability to visualization graphs as a picture of nodes and edges. ,
+Graph Visualization - The ability to visualization graphs as a picture of nodes and edges. 
 
 
