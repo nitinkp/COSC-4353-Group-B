@@ -9,7 +9,7 @@ import sys
 INF = 999
 try:
     # number of vertices in graph
-    nodes = int(input("Enter number of nodes: "))
+    nodes = int(input("Enter number of nodes (The limit is 5 as of now to avoid major complexity): "))
     # creating graph by adjacency matrix method
     edges = int(input("Enter number of edges: "))
 except:
@@ -92,6 +92,7 @@ out = []
 edge_out = []
 edge_out2 = []
 weights = []
+
 while edges < nodes - 1:
 
     minimum = INF
@@ -112,7 +113,7 @@ while edges < nodes - 1:
     weights += [str(g[a][b])]
     df2 = pd.DataFrame(out, columns=["Edge", "Weight"])
     # print(df2)
-    print("out", out)
+    # print("out", out)
     selected_node[b] = True
     edges += 1
 
@@ -143,15 +144,20 @@ for i in range(len(edge_out)):
 
 print("It is going to show a", nx.info(gr))
 
-pos = nx.spring_layout(gr, seed=7)
 
-nx.draw_networkx_nodes(gr, pos, node_size=700)
+def graph(gr):
+    pos = nx.spring_layout(gr, seed=7)
 
-nx.draw_networkx_edges(gr, pos, width=6)
+    nx.draw_networkx_nodes(gr, pos, node_size=700)
 
-nx.draw_networkx_labels(gr, pos, font_size=20, font_family="sans-serif")
+    nx.draw_networkx_edges(gr, pos, width=6)
 
-labels = nx.get_edge_attributes(gr, 'weight')
-nx.draw_networkx_edge_labels(gr, pos, font_size=20, edge_labels=labels)
+    nx.draw_networkx_labels(gr, pos, font_size=20, font_family="sans-serif")
 
-plt.show()
+    labels = nx.get_edge_attributes(gr, 'weight')
+    nx.draw_networkx_edge_labels(gr, pos, font_size=20, edge_labels=labels)
+
+    return plt.show()
+
+
+graph(gr)
