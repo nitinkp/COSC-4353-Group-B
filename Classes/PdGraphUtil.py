@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Funtion 1
+
 # Return adjacency matrix pandas dataframe
 # For Unweighted graph
 def df_to_adj_matrix(df_col1, df_col2):
@@ -10,7 +10,7 @@ def df_to_adj_matrix(df_col1, df_col2):
   adj_df = cross_df.reindex(index=idx, columns = idx, fill_value = 0)
   return adj_df
 
-# Function 2
+
 # Returns pandas dataframe from adjacency matrix dataframe
 # For Unweighted graph
 def adj_mat_to_df(adj_df, column_list):
@@ -27,17 +27,7 @@ def adj_mat_to_df(adj_df, column_list):
   return df
 
 # Unweighted Graph
-# Function 3
-# Input: File File which consist of standard user graph input
-# 1->2
-# 2->1,3,4
-# 3->2
-# 4->2
-# 5->2,6,7
-# 6->5,7
-# 7->5,6
-# Output: Return the edge list from the standard input
-# [[1, 2], [2, 1], [2, 3], [2, 4], [3, 2], [4, 2], [5, 2], [5, 6], [5, 7], [6, 5], [6, 7], [7, 5], [7, 6]]
+
 def get_edgelist_from_graph(fileName):
   f = open(fileName, "r")
   edge_list = []
@@ -52,23 +42,7 @@ def get_edgelist_from_graph(fileName):
 
 
 # Unweighted graph
-# Function 4
-# Input : File which consist of standard user graph input and is zero indexed or not
-# 1->2
-# 2->1,3,4
-# 3->2
-# 4->2
-# 5->2,6,7
-# 6->5,7
-# 7->5,6
-# Output: Return an adjacency matrix of the user input's graph
-# [[0 1 0 0 0 0 0]
-#  [1 0 1 1 0 0 0]
-#  [0 1 0 0 0 0 0]
-#  [0 1 0 0 0 0 0]
-#  [0 1 0 0 0 1 1]
-#  [0 0 0 0 1 0 1]
-#  [0 0 0 0 1 1 0]]
+
 def get_adj_mat(fileName, zero_indexed = False):
   edge_list = get_edgelist_from_graph(fileName)
   if not zero_indexed:
@@ -81,20 +55,20 @@ def get_adj_mat(fileName, zero_indexed = False):
       
   return np.array(adjacency)
 
-# Function 5
+
 # Weighted / Unweighted
 # Input :  CSV file consisting of adj matrix
-# "graph3mat.csv" or "graph1weightedMat.csv"
 # Output : Numpy array of adj matrix
+
 def csv_to_numpy_adjmat(fileName):
   adj_mat = np.genfromtxt(fileName, delimiter=',')
   return  np.array(adj_mat, dtype=np.int)
 
-# Funtion 6
+
 # Weighted / Unweighted
 # Input : Numpy array of adj matrix
 # Output :  CSV file consisting of adj matrix
-# "graph3mat.csv" or "graph1weightedMat.csv"
+
 def adj_mat_to_csv(adj_mat, path=""):
   np.savetxt(path + "adjMatrix.csv", adj_mat, delimiter=",", fmt='%i')
 
