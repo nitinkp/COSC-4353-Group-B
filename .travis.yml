@@ -3,7 +3,11 @@ python:
   - 3.9
   
 install:
-  - pip install pandas numpy
+  - pip install pandas numpy networkx[default]
   
 script:
   - python main.py
+  - python test_bfs.py
+  - python test_min.py
+  - python test_Dijkstras.py
+  - python test_PdGraphUtil.py
