@@ -9,9 +9,11 @@ import sys
 INF = 999
 try:
     # number of vertices in graph
-    nodes = int(input("Enter number of nodes (The limit is 5 as of now to avoid major complexity): "))
+#     nodes = int(input("Enter number of nodes (The limit is 5 as of now to avoid major complexity): "))
+    nodes = 5
     # creating graph by adjacency matrix method
-    edges = int(input("Enter number of edges: "))
+#     edges = int(input("Enter number of edges: "))
+    edges = 2
 except:
     print("enter integers only")
     sys.exit(1)
@@ -37,7 +39,10 @@ for f1, f2, f3 in os.walk(input_folder):
         inputs_list.append(os.path.join(f1, file))
 
 print(inputs_list)
-given_file = int(input("choose one file from the available inputs as a number starting with 0: "))
+# given_file = int(input("choose one file from the available inputs as a number starting with 0: "))
+given_file = 3
+
+#  removing user inputs here for travis testing purpose.
 
 # file_name = ""
 #
