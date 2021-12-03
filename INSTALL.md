@@ -1,2 +1,2 @@
 # Steps to run our project
-The program is a python utility library which takes in the inputs as .txt or .csv files and generates a graph datastructure as the adjacency matrix.
+The program is a python utility library which takes in the inputs as .txt or .csv files and generates a graph datastructure as the adjacency matrix. For use of Graph Quest simply include the proper libaries in your python code and use our functions after creating a class object from them. In the future Graph Quest will be made into an importable python library using the pip installer.
